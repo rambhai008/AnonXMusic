@@ -39,6 +39,5 @@ waifu_images = [
 
 @app.on_message(filters.command("boobs"))
 async def es_img(_, message):
-    gif = random.choice(waifu_images)
-    image = gif["image"]
+    image = random.choice(waifu_images)
     await message.reply_video(image, caption=f"BY @riasxrobot")
