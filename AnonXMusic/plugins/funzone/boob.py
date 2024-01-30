@@ -1,5 +1,6 @@
 import logging
 import random
+import time
 from pyrogram import filters
 from pyrogram.types import Message
 from AnonXMusic import app
@@ -40,4 +41,6 @@ waifu_images = [
 @app.on_message(filters.command("boobs"))
 async def es_img(_, message):
     image = random.choice(waifu_images)
-    await message.reply_video(video=image, caption=f"BY @riasxrobot")
+    sent_message = await message.reply_video(video=image, caption=f"BY @riasxrobot")
+    time.sleep(10)
+    await sent_message.delete()
