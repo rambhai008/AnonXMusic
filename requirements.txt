@@ -23,3 +23,11 @@ unidecode
 yt-dlp
 youtube-search
 youtube-search-python
+telegraph
+lexica-api==1.5.1
+telethon==1.33.1
+gpytranslate
+httpx[http2]
+aiohttp==3.9.1
+python-arq==6.0.5
+pyrogram
