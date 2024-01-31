@@ -21,7 +21,7 @@ async def es_img(_, message):
         image = data.get("image")
 
         if image:
-            sent_message = await message.reply_image(video=image, caption="BY @riasxrobot/n AUTO DELETE IN 30 SECOND", parse_mode=None)
+            sent_message = await message.reply_photo(video=image, caption="BY @riasxrobot/n AUTO DELETE IN 30 SECOND", parse_mode=None)
             asyncio.create_task(delete_message_after_timeout(sent_message, 30))  # Delete after 1 minute
         else:
             await message.reply_text("No image found.")
