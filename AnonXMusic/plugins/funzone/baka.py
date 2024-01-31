@@ -12,10 +12,6 @@ async def es_img(_, message):
     if response.status_code == 200:
         data = response.json()
         image = data["image"]
-        await message.reply_video(
-            image,
-            caption="||BY @riasxrobot||",  # Add spoiler caption
-            parse_mode=ParseMode.MARKDOWN # Enable Markdown parsing
-        )
+        await message.reply_video(image, caption=f"BY @riasxrobot")
     else:
         await message.reply_text("Website gyi")
