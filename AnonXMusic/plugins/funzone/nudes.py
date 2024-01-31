@@ -12,6 +12,6 @@ async def es_img(_, message):
     if response.status_code == 200:
         data = response.json()
         image = data["image"]
-        sent_message = await message.reply_photo(image, caption=f"BY @riasxrobot")
-        time.sleep(10)
-        await sent_message.delete()
+        await message.reply_video(image, caption=f"BY @riasxrobot")
+    else:
+        await message.reply_text("Website gyi")
