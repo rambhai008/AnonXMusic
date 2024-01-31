@@ -15,7 +15,9 @@ def get_waifu(client, message):
     if up:
         button = [[InlineKeyboardButton("SUPPORT", url=f"https://t.me/LustxSupport")]]
         markup = InlineKeyboardMarkup(button)
-        message.reply_photo(up,caption="BY @riasxrobot",reply_markup=markup)
+        sent_message = await message.reply_photo(up, caption=f"BY @riasxrobot")
+        time.sleep(10)
+        await sent_message.delete()
     else:
         message.reply("Request failed try /again")
         
