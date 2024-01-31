@@ -1,6 +1,6 @@
 import logging
 import random
-import time
+import asyncio
 from pyrogram import filters
 from pyrogram.types import Message
 from AnonXMusic import app
@@ -42,5 +42,7 @@ waifu_images = [
 async def es_img(_, message):
     image = random.choice(waifu_images)
     sent_message = await message.reply_video(video=image)
-    time.sleep(10)
+
+    await asyncio.sleep(10)
+
     await sent_message.delete()
