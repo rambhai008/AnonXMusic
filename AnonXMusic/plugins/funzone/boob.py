@@ -42,5 +42,5 @@ waifu_images = [
 async def es_img(_, message):
     image = random.choice(waifu_images)
     sent_message = await message.reply_video(video=image)
-    time.sleep(30)
+    time.sleep(10)
     await sent_message.delete()
