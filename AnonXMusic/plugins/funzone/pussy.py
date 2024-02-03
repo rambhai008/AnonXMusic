@@ -17,7 +17,7 @@ def get_image_urls(url):
   
 @app.on_message(filters.command("chod"))
 def ncosplay_pyrogram(client, message):
-    website_url = "https://ososedki.com/photos/-59558140_271765047"
+    website_url = "https://ososedki.com/cosplays"
 
     image_urls = get_image_urls(website_url)
 
