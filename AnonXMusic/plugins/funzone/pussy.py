@@ -13,7 +13,7 @@ def get_image_urls(url):
 
     return image_urls
   
-@app.on_message(filters.command("ncosplay"))
+@app.on_message(filters.command("chod"))
 def ncosplay_pyrogram(client, message):
     website_url = "https://www.fastingsex.com/hot-hentai-cosplay-pics-nude-cosplayer-photos"
 
