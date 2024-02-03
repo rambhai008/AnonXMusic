@@ -1,5 +1,6 @@
 import requests
 from requests import get
+from bs4 import BeautifulSoup
 from AnonXMusic import app
 from pyrogram import filters
 from pyrogram.types import InputMediaPhoto
