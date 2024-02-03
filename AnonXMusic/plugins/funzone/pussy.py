@@ -1,4 +1,3 @@
-import logging
 import requests
 from requests import get
 from AnonXMusic import app
