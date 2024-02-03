@@ -1,1 +1,30 @@
+import logging
+import requests
+from requests import get
+from AnonXMusic import app
+from pyrogram import filters
+from pyrogram.types import InputMediaPhoto
+from telegram import Update
+from telegram.ext import Updater, CommandHandler, CallbackContext
 
+def get_image_urls(url):
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+
+    image_tags = soup.find_all('img')
+    image_urls = [img['src'] for img in image_tags if 'src' in img.attrs]
+
+    return image_urls
+  
+@app.on_message(filters.command("ncosplay"))
+def ncosplay_pyrogram(client, message):
+    website_url = "https://www.fastingsex.com/hot-hentai-cosplay-pics-nude-cosplayer-photos"
+
+    image_urls = get_image_urls(website_url)
+
+    if image_urls:
+        random_image_url = random.choice(image_urls)
+
+        client.send_photo(message.chat.id, photo=random_image_url)
+    else:
+        message.reply_text("No images found.")
