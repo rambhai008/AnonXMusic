@@ -3,7 +3,6 @@ from requests import get
 from AnonXMusic import app
 from pyrogram import filters
 from pyrogram.types import InputMediaPhoto
-from telegram import Update
 from telegram.ext import Updater, CommandHandler, CallbackContext
 
 def get_image_urls(url):
