@@ -22,7 +22,7 @@ async def get_waifu(client, message):
         button = [[InlineKeyboardButton("SUPPORT", url="https://t.me/LustxSupport")]]
         markup = InlineKeyboardMarkup(button)
         
-        sent_message = await message.reply_photo(up, caption="BY @riasxrobot ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ɪɴ 30 ꜱᴇᴄᴏɴᴅ")
+        sent_message = await message.reply_video(up, caption="BY @riasxrobot ᴀᴜᴛᴏ ᴅᴇʟᴇᴛᴇ ɪɴ 30 ꜱᴇᴄᴏɴᴅ")
         
         # Delete the sent message after 1 minute
         asyncio.create_task(delete_message_after_timeout(sent_message, 30))
